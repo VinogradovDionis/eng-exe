@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<title>english</title>
+	<script src="eel.js"></script>
+	<link rel="stylesheet" type="text/css" href="/main.css">
+	<link rel="icon" type="image/png" href="/eng.png">
+</head>
+<body>
+	<h1>SPECIALLY FOR NIKOLAI SOBOLEV</h1>
+	<div><button id='btn-sum'>GENERATION</button></div>
+	
+	<div id="info"></div>
+
+	<script type="text/javascript">
+    async function words(){
+        
+        
+        let res = await eel.words()();
+        document.getElementById('info').innerHTML = res;
+        }
+       
+        
+        document.getElementById("btn-sum").onclick = words;
+        
+	</script>
+</body>
+</html>
